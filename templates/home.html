@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Age Calculator</title>
+    <link rel="icon" type="image/svg" href="/static/logo.svg">
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__brand">
+        <img
+          src="/static/logo.svg"
+          alt="Age conversion logo"
+          class="navbar__logo"
+        />
+        Age Calculator
+      </div>
+    </header>
+
+    <main class="main">
+      <section>
+        <form class="form" action="/" method="POST">
+          <p class="form__input">
+            <p class="form__intro">Add your Date of Birth below to know your current age, age in months, weeks, days, hours and seconds. </p>
+
+            <label for="birth" class="form__label"
+              >Enter your date of birth and get started:</label>
+            
+            <input type="date" id="birth" name="content" class="form__text" />
+          </p>
+
+          <button type="submit" class="form__submit"> Submit</button>
+        </form>
+      </section>
+
+      <section>
+        <h1>Your age in:- </h1>
+        <article class="answer">
+          <p class="output"><span class="outputs">Years:</span> {{ age }} </p>
+          <p class="output"><span class="outputs">Months:</span> {{ months }} </p>
+          <p class="output"><span class="outputs">Weeks:</span> {{ weeks }}</p>
+          <p class="output"><span class="outputs">Days:</span> {{ days }}</p>
+          <p class="output"><span class="outputs">Hours:</span> {{ hours }}</p>
+          <p class="output"><span class="outputs">Seconds:</span> {{ seconds }}</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <a class="footer__item">Made by Naimish Chavda</a>
+      </div>
+    </footer>
+  </body>
+</html>
